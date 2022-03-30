@@ -1,5 +1,6 @@
 <div class="container pt-md-5 col-md-4">
-<form action="?controller=producto&action=save" method="POST">
+<h2>Actualizar</h2>
+<form action="?controller=usuario&action=update&id=<?php echo$_GET['id']?>" method="POST">
   <div class="mb-3">
     <label for="nombre" class="form-label">Nombre del producto</label>
     <input type="text" class="form-control" id="nombre" aria-describedby="Nombre" name="nombre">
@@ -16,6 +17,6 @@
     <span class="input-group-text" id="basic-addon1">€</span>
   </div>
 
-  <button type="submit" class="btn btn-primary">Guardar</button>
+  <button type="submit" class="btn btn-primary">Actualizar producto</button>
 </form>
 </div>
