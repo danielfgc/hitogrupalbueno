@@ -62,7 +62,7 @@ function clicar(event){
 
     
 }
-
+document.querySelector('li').addEventListener("mouseover", function(event){clicar(event)});
 
 
 function pintarCabecera(){
@@ -87,6 +87,7 @@ function eliminarElementoH(){
 
     padre.removeChild(hijo);
     padre2.removeChild(hijo2);
+
 }
 
 function agregarTitulo(){
@@ -172,7 +173,7 @@ function eliminarElementoI(){
     
 }
 function agregarImagen(){
-    contadorp++;
+    contadori++;
          var fotos = document.getElementById('fotos');
          var list = document.createElement('li'); 
          
@@ -211,7 +212,7 @@ function eliminarElementoE(){
     
 }
 function agregarEnlace(){
-    contadorp++;
+    contadore++;
          var enlaces = document.getElementById('enlaces');
          var list = document.createElement('li'); 
          
@@ -226,3 +227,4 @@ function agregarEnlace(){
         list.addEventListener("mouseover", function(event){clicar(event)}); 
           
 }
+
