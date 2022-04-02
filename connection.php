@@ -1,8 +1,10 @@
 <?php
 
-    class Connect{
-        function getConnection(){
-            $conexion = new PDO("pgsql:host=localhost;port=5432;dbname=mvc", "postgres","curso");
-            return $conexion;
-        }
+class Connect
+{
+    function getConnection()
+    {
+        $conexion = new PDO("pgsql:host=postgres;port=5432;dbname=hitogrupalPG", "admin", "admin");
+        return $conexion;
     }
+}
