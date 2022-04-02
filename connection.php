@@ -2,9 +2,9 @@
 
 class Connect
 {
-    function getConnection()
+    static function getConnection()
     {
-        $conexion = new PDO("pgsql:host=postgres;port=5432;dbname=hitogrupalPG", "admin", "admin");
+        $conexion = new PDO("pgsql:host=postgres;port=5432;dbname=hitogrupal", "admin", "admin");
         return $conexion;
     }
 }

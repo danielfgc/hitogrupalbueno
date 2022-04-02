@@ -6,11 +6,9 @@ axios.post(rutaUrl,{
 })
 .then((response)=>{
     respuesta= response.data;
-    if(respuesta == 'Registro realizado con éxito'){
-        window.alert(respuesta);
-        window.location.href = 'index.php';
-    }else{
-        document.getElementById('erregister').innerHTML = respuesta;
+    if(respuesta){
+        window.alert("Insertado con éxito");
+        window.location.href = 'pruebacanvas.php';
     }
 })
 .catch((error)=>{
