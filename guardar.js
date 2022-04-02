@@ -1,7 +1,7 @@
 function guardarVista(rutaUrl){
 
 axios.post(rutaUrl,{
-    inputs: document.getElementById('inputs').innerHTML,
+    inputs: document.getElementById('accordion').innerHTML,
     cabecera: document.getElementById('cabecera').innerHTML
 })
 .then((response)=>{

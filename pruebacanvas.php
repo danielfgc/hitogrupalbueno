@@ -25,7 +25,6 @@
       </div>
       <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
       
-    <aside class="fixed-left col-4 row-12" id="inputs">
     <div id="pintar">
         
 <button id="boton" type="button" class="btn btn-success mt-md-3" onclick="agregarTitulo()">Generar Titulo</button>
