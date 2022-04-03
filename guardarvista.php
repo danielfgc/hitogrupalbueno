@@ -10,7 +10,7 @@ function guardar()
     $cabecera = $data['cabecera'];
     $cuerpo = $data['cuerpo'];
     $footer = $data['footer'];
-    $resultado = $conexion->prepare("INSERT INTO vistas values(default, '$cabecera','$cuerpo','$footer',2,'$inputs');");
+    $resultado = $conexion->prepare("INSERT INTO vistas values(default, '$cabecera','$cuerpo','$footer',2,'$inputs','nombrevista');");
     $resultado->execute();
     echo $resultado;
 }
