@@ -7,8 +7,9 @@ function guardar(){
     $data = json_decode($request_body, true);
     $inputs = $data['inputs'];
     $cabecera = $data['cabecera'];
-    $conexion->query("INSERT INTO vistas(default, '$cabecera','','',2,'$inputs');");
-    echo true;
+    $resultado = $conexion->prepare("INSERT INTO vistas values(default, '$cabecera','','',2,'$inputs');");
+    $resultado->execute();
+    echo $resultado;
 }
 guardar();
 
