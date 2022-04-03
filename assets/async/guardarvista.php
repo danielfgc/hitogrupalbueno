@@ -2,15 +2,16 @@
 
 function guardar()
 {
-    require_once('connection.php');
-    $conexion = Connect::getConnection();
+    require_once('../../Connection.php');
+    $conexion = Db::getConnect();
     $request_body = file_get_contents('php://input');
     $data = json_decode($request_body, true);
     $inputs = $data['inputs'];
     $cabecera = $data['cabecera'];
     $cuerpo = $data['cuerpo'];
     $footer = $data['footer'];
-    $resultado = $conexion->prepare("UPDATE vistas SET cabecera = '$cabecera', cuerpo = '$cuerpo', footer = '$footer', inputs = '$inputs' where idvista = 3;");
+    $nombre = $data['nombrevista'];
+    $resultado = $conexion->prepare("INSERT INTO vistas values(default, '$cabecera','$cuerpo','$footer',".$_COOKIE['iduser'].",'$inputs','$nombre');");
     $resultado->execute();
     echo $resultado;
 }

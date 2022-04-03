@@ -1,28 +1,18 @@
-<!doctype html>
-<html lang="en">
 
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <title>Hello, world!</title>
-</head>
-
-<body>
-  <div class="container-fluid">
+<div class="container-fluid">
     <div class="row flex-nowrap">
       <div class="col-md-3 col-auto px-0 collapse collapse-horizontal overflow-hidden shadow-lg p-3 mb-5 bg-body rounded" id="sidebar">
         <div class="list-group border-0 text-center text-sm-start min-vh-100" id="sidebar-menu">
           <div class="container mt-3">
-            <button type="button" class="btn btn-primary mt-2" onclick="actualizarVista('actualizarvista.php')">Guardar vista</button>
-            <button type="button" class="btn btn-primary mt-2">volver a vistas</button>
+            <button type="button" class="btn btn-primary mt-2" onclick="actualizarVista('assets/async/actualizarvista.php')">Actualizar vista</button>
+            <a href="?controller=usuario&action=lista"><button type="button" class="btn btn-primary mt-2">volver a vistas</button></a>
             <h2>Elementos web</h2>
+            <input type="text" class="form-control m-2" id="nombrevista" placeholder="Nombre de la vista" >
             <div id="accordion" class="shadow-lg mb-5 bg-body rounded">
               <?php
               require_once('connection.php');
-              $conexion = Connect::getConnection();
-              $resultado = $conexion->prepare("SELECT*FROM vistas where idvista = 3;");
+              $conexion = Db::getConnect();
+              $resultado = $conexion->prepare("SELECT*FROM vistas where idvista = ".$_GET['idvista'].";");
               $resultado->execute();
 
               foreach ($resultado->fetchAll() as $fila) {
@@ -39,8 +29,8 @@
           <div id="cabecera">
             <?php
             require_once('connection.php');
-            $conexion = Connect::getConnection();
-            $resultado = $conexion->prepare("SELECT*FROM vistas where idvista = 3;");
+            $conexion = Db::getConnect();
+            $resultado = $conexion->prepare("SELECT*FROM vistas where idvista =".$_GET['idvista'].";");
             $resultado->execute();
 
             foreach ($resultado->fetchAll() as $fila) {
@@ -54,8 +44,8 @@
           <div id="cuerpo">
             <?php
             require_once('connection.php');
-            $conexion = Connect::getConnection();
-            $resultado = $conexion->prepare("SELECT*FROM vistas where idvista = 3;");
+            $conexion = Db::getConnect();
+            $resultado = $conexion->prepare("SELECT*FROM vistas where idvista =".$_GET['idvista'].";");
             $resultado->execute();
 
             foreach ($resultado->fetchAll() as $fila) {
@@ -70,8 +60,8 @@
           <footer id="footer" class="d-flex justify-content-evenly flex-wrap">
             <?php
             require_once('connection.php');
-            $conexion = Connect::getConnection();
-            $resultado = $conexion->prepare("SELECT*FROM vistas where idvista = 3;");
+            $conexion = Db::getConnect();
+            $resultado = $conexion->prepare("SELECT*FROM vistas where idvista =".$_GET['idvista'].";");
             $resultado->execute();
 
             foreach ($resultado->fetchAll() as $fila) {
@@ -83,11 +73,3 @@
       </main>
     </div>
   </div>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="actualizar.js"></script>
-  <script src="vistauser.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-</body>
-
-</html>
