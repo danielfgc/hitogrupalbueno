@@ -22,7 +22,7 @@
               <?php
               require_once('connection.php');
               $conexion = Connect::getConnection();
-              $resultado = $conexion->prepare("SELECT*FROM vistas where idvista = 23;");
+              $resultado = $conexion->prepare("SELECT*FROM vistas where idvista = 3;");
               $resultado->execute();
 
               foreach ($resultado->fetchAll() as $fila) {
@@ -40,7 +40,7 @@
             <?php
             require_once('connection.php');
             $conexion = Connect::getConnection();
-            $resultado = $conexion->prepare("SELECT*FROM vistas where idvista = 23;");
+            $resultado = $conexion->prepare("SELECT*FROM vistas where idvista = 3;");
             $resultado->execute();
 
             foreach ($resultado->fetchAll() as $fila) {
@@ -55,7 +55,7 @@
             <?php
             require_once('connection.php');
             $conexion = Connect::getConnection();
-            $resultado = $conexion->prepare("SELECT*FROM vistas where idvista = 23;");
+            $resultado = $conexion->prepare("SELECT*FROM vistas where idvista = 3;");
             $resultado->execute();
 
             foreach ($resultado->fetchAll() as $fila) {
@@ -71,7 +71,7 @@
             <?php
             require_once('connection.php');
             $conexion = Connect::getConnection();
-            $resultado = $conexion->prepare("SELECT*FROM vistas where idvista = 23;");
+            $resultado = $conexion->prepare("SELECT*FROM vistas where idvista = 3;");
             $resultado->execute();
 
             foreach ($resultado->fetchAll() as $fila) {

@@ -10,7 +10,7 @@ function guardar()
     $cabecera = $data['cabecera'];
     $cuerpo = $data['cuerpo'];
     $footer = $data['footer'];
-    $resultado = $conexion->prepare("UPDATE vistas SET cabecera = '$cabecera', cuerpo = '$cuerpo', footer = '$footer', inputs = '$inputs' where idvista = 23;");
+    $resultado = $conexion->prepare("UPDATE vistas SET cabecera = '$cabecera', cuerpo = '$cuerpo', footer = '$footer', inputs = '$inputs' where idvista = 3;");
     $resultado->execute();
     echo $resultado;
 }
