@@ -6,7 +6,7 @@ class Db
  
 	public static function  getConnect(){
 	
-			$conexion= new PDO("pgsql:host=localhost;port=5432;dbname=hitogrupal2", "postgres", "curso");
+			$conexion= new PDO("pgsql:host=postgres;port=5432;dbname=hitogrupal2", "admin", "admin");
 		return $conexion;
 	}
 }
