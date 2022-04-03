@@ -62,7 +62,7 @@ function clicar(event){
 
     
 }
-// document.querySelector('li').addEventListener("mouseover", function(event){clicar(event)});
+document.getElementById('collapseOne').querySelector('li').addEventListener("mouseover", function(event){clicar(event)});
 
 
 function pintarCabecera(){
@@ -296,7 +296,7 @@ function clicar2(event){
     
 }
 
-// document.querySelector('li').addEventListener("mouseover", function(event){clicar2(event)});
+document.getElementById('collapseTwo').querySelector('li').addEventListener("mouseover", function(event){clicar2(event)});
 
 
 function pintarCuerpo(){
@@ -530,7 +530,7 @@ function clicar3(event){
     
 }
 
-//document.querySelector('li').addEventListener("mouseover", function(event){clicar3(event)});
+document.getElementById('collapseThree').querySelector('li').addEventListener("mouseover", function(event){clicar3(event)});
 
 
 function pintarfooter(){

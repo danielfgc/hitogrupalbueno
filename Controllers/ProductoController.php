@@ -77,4 +77,43 @@ class ProductoController
 
         require_once('Views/Producto/show.php');
     }
+
+    // public function inicioSesion($usuario, $pass)
+    // {
+    //     $mensaje = "";
+
+    //     $conn = mysqli_connect("localhost", "root", "", "hito2");
+    //     $sql = "SELECT*FROM usuarios WHERE usuario = '$usuario'";
+    //     $resultado = mysqli_query($conn, $sql);
+    //     $fila = mysqli_fetch_row($resultado);
+    //     //Comprobar si contiene datos
+    //     //var_dump($fila);
+    //     if (is_array($fila) === true && password_verify($pass, $fila[2]) && $fila[4] === "1") {
+    //         session_start();
+    //         $_SESSION['idusuario'] = $fila[0];
+    //         $_SESSION['usuario'] = $usuario;
+    //         $_SESSION['contraseña'] = $pass;
+    //         $_SESSION['email'] = $fila[3];
+    //         $_SESSION['admin'] = $fila[4];
+    //         $_SESSION['foto'] = $fila[5];
+    //         header("Location: ../vistas/admin.php");
+    //     } else {
+    //         if (is_array($fila) === true && password_verify($pass, $fila[2])) {
+    //             session_start();
+    //             $_SESSION['idusuario'] = $fila[0];
+    //             $_SESSION['usuario'] = $usuario;
+    //             $_SESSION['contraseña'] = $pass;
+    //             $_SESSION['email'] = $fila[3];
+    //             $_SESSION['admin'] = $fila[4];
+    //             $_SESSION['foto'] = $fila[5];
+    //             header("Location: ../vistas/usuario.php");
+    //         } else {
+    //             $fila = "";
+    //             $mensaje = "Usuario o contraseña incorrectos";
+    //             echo "<h6>" . $mensaje . "</h6>";
+    //         }
+    //     }
+    //     //Cerramos conexión
+    //     mysqli_close($conn);
+    // }
 }
