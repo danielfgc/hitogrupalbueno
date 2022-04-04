@@ -11,8 +11,9 @@ function respuesta(){
       $data = json_decode($request_body, true);
       $contraseña = password_hash($data['recucontra'], PASSWORD_BCRYPT);
       if(verificarContraseña($data['recucontra'],$data['reperecucontra'])){
-        $conexion->query("UPDATE usuarios set contrsaeña='$contraseña', where usuario = '".$data['user']."'");
-        echo true;       
+        $consulta = $conexion->prepare("UPDATE usuarios set contraseña='$contraseña' where usuario = '".$data['user']."';");
+        $consulta->execute();
+        echo $consulta;       
     }
 }
 

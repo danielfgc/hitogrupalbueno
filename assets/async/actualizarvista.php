@@ -11,7 +11,8 @@ function guardar()
     $cuerpo = $data['cuerpo'];
     $footer = $data['footer'];
     $nombre= $data['nombrevista'];
-    $resultado = $conexion->prepare("UPDATE vistas SET cabecera = '$cabecera', cuerpo = '$cuerpo', footer = '$footer', inputs = '$inputs', nombrevista = '$nombre' where idvista = ".$_GET['idvista'].";");
+    $idvista = intval($data['idvista']);
+    $resultado = $conexion->prepare("UPDATE vistas SET cabecera = '$cabecera', cuerpo = '$cuerpo', footer = '$footer', inputs = '$inputs', nombrevista = '$nombre' where idvista = $idvista;");
     $resultado->execute();
     echo $resultado;
 }

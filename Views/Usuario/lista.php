@@ -79,6 +79,7 @@
                   </div>";    
               echo "</tr>";
               }
+              $consulta->closeCursor();
             ?>
 
             

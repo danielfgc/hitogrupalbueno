@@ -3,8 +3,7 @@
 function verificarUser($name){
     require_once("../../Connection.php");
     $conexion=Db::getConnect();
-    $consulta = $conexion->prepare("Select usuario from usuarios where usuario = ':user'");
-    $consulta->bindParam('user',$name);
+    $consulta = $conexion->prepare("Select usuario from usuarios where usuario = '$name'");
     $consulta->execute();
     $verificar = $consulta->fetch();
     return $verificar;

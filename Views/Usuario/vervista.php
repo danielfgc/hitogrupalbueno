@@ -3,7 +3,6 @@
         <header class="container" id="cabeceras">
           <div id="cabecera">
             <?php
-            require_once('connection.php');
             $conexion = Db::getConnect();
             $resultado = $conexion->prepare("SELECT*FROM vistas where idvista =".$_GET['idvista'].";");
             $resultado->execute();
@@ -18,7 +17,6 @@
         <div class="row" id="cuerpos">
           <div id="cuerpo">
             <?php
-            require_once('connection.php');
             $conexion = Db::getConnect();
             $resultado = $conexion->prepare("SELECT*FROM vistas where idvista =".$_GET['idvista'].";");
             $resultado->execute();
@@ -34,7 +32,6 @@
         <div class="row" id="footers">
           <footer id="footer" class="d-flex justify-content-evenly flex-wrap">
             <?php
-            require_once('connection.php');
             $conexion = Db::getConnect();
             $resultado = $conexion->prepare("SELECT*FROM vistas where idvista =".$_GET['idvista'].";");
             $resultado->execute();

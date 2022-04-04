@@ -5,7 +5,8 @@ function actualizarVista(rutaUrl){
         cabecera: document.getElementById('cabeceras').innerHTML,
         cuerpo: document.getElementById('cuerpos').innerHTML,
         footer: document.getElementById('footers').innerHTML,
-        nombrevista:document.getElementById('nombrevista').value
+        nombrevista:document.getElementById('nombrevista').value,
+        idvista:document.getElementById('idvista').value
 
     })
     .then((response)=>{
